@@ -6,7 +6,10 @@ import { UserRouter } from './routes/auth.js'
 import { paintsRouter } from './routes/paint.js'
 import { usersRouter } from './routes/user.js'
 
-// port in ENV
+
+const corsOptions = {
+    origin: "https://paintcompany-frontend.onrender.com", // frontend URL (ReactJS)
+}
 
 const app = express()
 app.use(express.json())
