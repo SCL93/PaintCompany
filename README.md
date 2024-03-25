@@ -9,7 +9,7 @@ Deployed using Render: https://paintcompany-frontend.onrender.com/
 
 (env and build configurations saved on Render, set autodeployment for every github commit)
 
-## LOGIN
+## LOGIN + STORY POINTS
 
 For each user story a different user was created. Please use the below logins:
 
@@ -28,7 +28,11 @@ Painters (view/edit)
 Adam (admin)
 - username: adam
 - password: password
+  
 
+Permission based page views and API use.
+
+Dynamic background colours for Paint Cards to represent "Swim Lanes" for which product are In-stock/low-stock/out-of-stock
 
 ## Local Setup
 
