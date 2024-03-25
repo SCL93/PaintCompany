@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Card from "../Card";
+import { useGlobalContext } from "../../context";
 
 const PaintCard = ({ paint }) => {
   const { name, quantity, _id } = paint;
+  const { roles } = useGlobalContext();
 
   // dynamic background for Paint Cards to replicate userstory "Swim lanes"
   // GREEN for >=20 quantity, YELLOW for 1-20, RED For 0 quantity.
@@ -25,6 +26,7 @@ const PaintCard = ({ paint }) => {
       editPath={`/paint/${_id}`}
       deletePath={`/deletepaint/${_id}`}
       style={{ backgroundColor: bgColor }} // Apply the background color based on quantity
+      showActions={roles === "view/edit"}
     />
   );
 };
