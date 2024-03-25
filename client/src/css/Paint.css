@@ -1,0 +1,101 @@
+  /* Container for ALL cards */
+.paint-list, .user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Individual Card */
+  .info-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: #ffffff;
+  }
+  
+  .info-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .info-card .info-details {
+    padding: 10px;
+  }
+  
+  .info-card .info-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #e6f2ff;
+  }
+  
+  .info-card button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .info-card .btn-link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Edit Button */
+  .info-card button:nth-child(1) {
+    background-color: #4caf50;
+  }
+  
+  .info-card button:nth-child(1):hover {
+    background-color: #388e3c; 
+  }
+  
+  /* Delete Button */
+  .info-card button:nth-child(2) {
+    background-color: #f44336; 
+  }
+  
+  .info-card button:nth-child(2):hover {
+    background-color: #d32f2f;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .paint-list, .user-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .info-card {
+      width: 80%; 
+      margin: 10px auto; 
+    }
+  
+    .info-card .info-actions {
+      flex-direction: column;
+    }
+  
+    .info-card button {
+      margin-top: 10px;
+      width: 100%; 
+    }
+  }
+  
+  body, html {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 480px) {
+    body, html {
+      font-size: 14px;
+    }
+  
+    .info-card .info-details h3, .info-card .info-details p {
+      margin: 5px 0; 
+    }
+  }
