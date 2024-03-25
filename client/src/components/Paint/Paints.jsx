@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import PaintCard from "./PaintCard";
 import "../../css/Paint.css";
 
-const Paints = ({ role }) => {
+const Paints = () => {
   const [paints, setPaints] = useState([]);
   useEffect(() => {
     axios
