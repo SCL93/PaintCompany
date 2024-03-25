@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../css/Login.css";
 import { useGlobalContext } from "../context";
+import { toast } from "react-toastify";
 
 const Login = ({}) => {
   const [username, setUsername] = useState("");
@@ -49,6 +50,18 @@ const Login = ({}) => {
           if (mapPermissions(res.data.role) === "admin") {
             navigate("/users");
           }
+        }
+        if (res.data.message === "user not registered") {
+          toast.error(res.data.message, {
+            position: "top-center",
+            toastId: "login",
+          });
+        }
+        if (res.data.message === "incorrect password") {
+          toast.error(res.data.message, {
+            position: "top-center",
+            toastId: "login",
+          });
         }
       })
       .catch((err) => console.log(err));
