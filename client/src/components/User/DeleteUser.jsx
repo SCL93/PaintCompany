@@ -12,7 +12,7 @@ const DeleteUser = () => {
   // include global roles in req.body for backend permission validation
   useEffect(() => {
     axios
-      .delete("http://localhost:3001/user/user/" + id, {
+      .delete("https://paintcompany.onrender.com/user/user/" + id, {
         data: { data: roles },
       })
       .then((res) => {

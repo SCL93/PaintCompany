@@ -15,7 +15,7 @@ const EditPaint = () => {
   // get selected paint, then populate form with paint values
   useEffect(() => {
     axios
-      .get("http://localhost:3001/paint/paint/" + id)
+      .get("https://paintcompany.onrender.com/paint/paint/" + id)
       .then((res) => {
         setName(res.data.name);
         setQuantity(res.data.quantity);
@@ -27,7 +27,11 @@ const EditPaint = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3001/paint/paint/" + id, { name, quantity, roles })
+      .put("https://paintcompany.onrender.com/paint/paint/" + id, {
+        name,
+        quantity,
+        roles,
+      })
       .then((res) => {
         if (res.data.updated) {
           toast.success("Edit Sucessful", {

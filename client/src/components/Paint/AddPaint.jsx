@@ -14,7 +14,7 @@ const AddPaint = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/paint/add", { name, quantity, roles })
+      .post("https://paintcompany.onrender.com/add", { name, quantity, roles })
       .then((res) => {
         if (res.data.added) {
           toast.success("Add Successful", {

@@ -16,7 +16,7 @@ const AddUser = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/user/add", {
+      .post("https://paintcompany.onrender.com/user/add", {
         username,
         password,
         role,

@@ -16,7 +16,7 @@ const EditUser = () => {
   // get selected user, then populate form with user values
   useEffect(() => {
     axios
-      .get("http://localhost:3001/user/user/" + id)
+      .get("https://paintcompany.onrender.com/user/user/" + id)
       .then((res) => {
         console.log(res);
         setUsername(res.data.username);
@@ -29,7 +29,7 @@ const EditUser = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3001/user/user/" + id, {
+      .put("https://paintcompany.onrender.com/user/user/" + id, {
         username,
         password,
         role,
