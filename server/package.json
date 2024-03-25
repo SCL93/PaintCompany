@@ -1,11 +1,11 @@
 {
-  "name": "todo-mern",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install-server": "cd Server && npm install",
-    "start-server": "cd Server && node index.js",
+    "install-server": "cd server && npm install",
+    "start-server": "cd server && node index.js",
     "install-client": "cd client && npm install",
     "build-client": "cd client && npm run build",
     "start-client": "cd client && npm run start"
