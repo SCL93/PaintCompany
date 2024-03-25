@@ -10,7 +10,6 @@ const Users = () => {
       .get("https://paintcompany.onrender.com/user/users")
       .then((res) => {
         setUsers(res.data);
-        console.log(res.data);
       })
       .catch((err) => console.log(err));
   }, []);

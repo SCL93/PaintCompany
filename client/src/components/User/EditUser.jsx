@@ -18,7 +18,6 @@ const EditUser = () => {
     axios
       .get("https://paintcompany.onrender.com/user/user/" + id)
       .then((res) => {
-        console.log(res);
         setUsername(res.data.username);
         setRole(res.data.role);
       })
