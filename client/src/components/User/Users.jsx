@@ -7,7 +7,7 @@ const Users = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3001/user/users")
+      .get("https://paintcompany.onrender.com/user/users")
       .then((res) => {
         setUsers(res.data);
         console.log(res.data);

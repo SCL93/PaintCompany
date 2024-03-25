@@ -6,7 +6,7 @@ const GlobalContext = createContext();
 export const useGlobalContext = () => useContext(GlobalContext);
 
 const AppContext = (props) => {
-  const [roles, setRoles] = useState("view");
+  const [roles, setRoles] = useState("");
   return (
     <GlobalContext.Provider value={{ roles, setRoles }}>
       {props.children}

@@ -7,7 +7,7 @@ const Paints = ({ role }) => {
   const [paints, setPaints] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:3001/paint/paints")
+      .get("https://paintcompany.onrender.com/paint/paints")
       .then((res) => {
         setPaints(res.data);
         console.log(res.data);
