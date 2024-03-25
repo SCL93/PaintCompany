@@ -5,9 +5,33 @@ Paint Store is a mobile friendly web application built with
 - Frontend: React, Vite
 - Backend: JS, Express, Node, MongoDB
 
+Deployed using Render: https://paintcompany-frontend.onrender.com/
+(configurations saved, autodeployment for every github commit)
+
+## LOGIN
+
+For each user story a different user was created. Please use the below logins:
+
+John (view)
+- username: john
+- password: password
+
+Jane (view/edit)
+- username: jane
+- password: password
+
+Painters (view/edit)
+- username: painter
+- password: password
+
+Adam (admin)
+- username: adam
+- password: password
+
+
 ## Local Setup
 
-Configure ENV port + MongoDB URL.
+Configure ENV port + MongoDB URL + replace frontend axios calls with Localhost
 
 Preload MongoDB with Default DB "Project" and collections "users".
 
@@ -21,26 +45,9 @@ Then add in a user based on this schema (this will be your initial login user):
 }
 ```
 
-Roles are mapped to permissions in the front-end:
-
-- 1 = view (view paints)
-- 2 = view/edit (view/add/edit/delete paints)
-- 3 = admin (view/add/edit/delete users)
-
-Startup commands:
-
-```bash
-npm install
-
-# start front end
-npm run dev
-# start back end
-npm start
-```
 
 ## Future TODOs
 
 - JWT based authentication + session management
 - Use bcrypt for password hashing/validation
 - Refactor APIs
-- Toasts for "success" or "error" responses
