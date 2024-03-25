@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../context";
+import { toast } from "react-toastify";
 import "../../css/AddEditCard.css";
 
 const AddUser = () => {
@@ -23,8 +24,16 @@ const AddUser = () => {
       })
       .then((res) => {
         if (res.data.added) {
+          toast.success("Add Successful", {
+            position: "top-center",
+            toastId: "add",
+          });
           navigate("/users");
         } else {
+          toast.error("Add Error", {
+            position: "top-center",
+            toastId: "add",
+          });
           console.log(res);
         }
       })

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useGlobalContext } from "../../context";
+import { toast } from "react-toastify";
 import "../../css/AddEditCard.css";
 
 const EditPaint = () => {
@@ -29,8 +30,16 @@ const EditPaint = () => {
       .put("http://localhost:3001/paint/paint/" + id, { name, quantity, roles })
       .then((res) => {
         if (res.data.updated) {
+          toast.success("Edit Sucessful", {
+            position: "top-center",
+            toastId: "edit",
+          });
           navigate("/paints");
         } else {
+          toast.error("Edit Error", {
+            position: "top-center",
+            toastId: "edit",
+          });
           console.log(res);
         }
       })

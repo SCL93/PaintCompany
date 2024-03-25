@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../context";
-import "../../css/AddEditCard.css";
+import { toast } from "react-toastify";
 
 const AddPaint = () => {
   const [name, setName] = useState("");
@@ -17,8 +17,16 @@ const AddPaint = () => {
       .post("http://localhost:3001/paint/add", { name, quantity, roles })
       .then((res) => {
         if (res.data.added) {
+          toast.success("Add Successful", {
+            position: "top-center",
+            toastId: "add",
+          });
           navigate("/paints");
         } else {
+          toast.error("Add Error", {
+            position: "top-center",
+            toastId: "add",
+          });
           console.log(res);
         }
       })
