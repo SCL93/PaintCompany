@@ -31,7 +31,7 @@ const Login = ({}) => {
 
   const handleSubmit = () => {
     axios
-      .post("https://paintcompany-frontend.onrender.com//auth/login", {
+      .post("https://paintcompany.onrender.com/auth/login", {
         username,
         password,
       })
