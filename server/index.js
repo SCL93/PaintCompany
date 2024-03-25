@@ -13,7 +13,7 @@ const corsOptions = {
 
 const app = express()
 app.use(express.json())
-app.use(cors());
+app.use(cors(corsOptions));
 dotenv.config()
 app.use('/auth', UserRouter)
 app.use('/paint', paintsRouter)
