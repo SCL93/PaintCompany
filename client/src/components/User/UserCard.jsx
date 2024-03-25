@@ -19,8 +19,8 @@ const UserCard = ({ user }) => {
 
   return (
     <Card
-      title={username}
-      subtitle={mapPermissions(role)}
+      title={"Username: " + username}
+      subtitle={"Permissions: " + mapPermissions(role)}
       id={_id}
       editPath={`/user/${_id}`}
       deletePath={`/deleteuser/${_id}`}

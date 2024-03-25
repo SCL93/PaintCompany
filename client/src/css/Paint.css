@@ -18,10 +18,6 @@
     background-color: #ffffff;
   }
   
-  .info-card:hover {
-    transform: scale(1.05);
-  }
-  
   .info-card .info-details {
     padding: 10px;
   }
