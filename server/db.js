@@ -3,9 +3,10 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
+// mongoose URL in ENV
 const Connection = async () => {
     try {
-        mongoose.connect('mongodb+srv://sungchilau:6ndjtLnDwNTyjZqf@cluster0.z5eqhb2.mongodb.net/Project')
+        mongoose.connect(process.env.URL)
         console.log("Connected")
     } catch (err){
         console.log("Error" + err)

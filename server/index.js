@@ -6,6 +6,8 @@ import { UserRouter } from './routes/auth.js'
 import { paintsRouter } from './routes/paint.js'
 import { usersRouter } from './routes/user.js'
 
+// port in ENV
+
 const app = express()
 app.use(express.json())
 app.use(cors());
@@ -14,6 +16,6 @@ app.use('/auth', UserRouter)
 app.use('/paint', paintsRouter)
 app.use('/user', usersRouter)
 
-app.listen(3001, ()=>{
+app.listen(process.env.PORT, ()=>{
     console.log("Server is running");
 })
