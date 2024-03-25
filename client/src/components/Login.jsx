@@ -31,7 +31,10 @@ const Login = ({}) => {
 
   const handleSubmit = () => {
     axios
-      .post("http://localhost:3001/auth/login", { username, password })
+      .post("https://paintcompany-frontend.onrender.com//auth/login", {
+        username,
+        password,
+      })
       .then((res) => {
         if (res.data.login) {
           // set global role based on permission on sucessful login
